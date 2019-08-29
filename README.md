@@ -25,5 +25,9 @@ start a `jupyter notebook` session there and show the initial output.
 You can reattach to the tmux session (e.g. to kill jupyter or check the access token)
 with for example:
 
-	tmux -t Jupyter-foobardir
+    tmux -t Jupyter-foobardir
+
+It is also possible to dump the latest output/logs without attaching:
+
+    tmux capture-pane -p -t Jupyter-foobardir
 
