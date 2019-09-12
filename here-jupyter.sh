@@ -20,7 +20,9 @@ echo "Starting tmux session '$SESSION_NAME' in background with command $COMMAND"
 if tmux new-session -s $SESSION_NAME -d "$COMMAND"; then
     echo "Tmux session launched with initial output:"
     sleep 1
-    tmux capture-pane -p -t $SESSION_NAME
+    echo "----------------------------------------------------------------"
+    tmux capture-pane -p -t $SESSION_NAME | sed '/^$/d'
+    echo "----------------------------------------------------------------"
     echo "To re-attach:"
     echo "    tmux attach -t $SESSION_NAME"
     echo "To dump latest output/logs:"
