@@ -23,6 +23,8 @@ if tmux new-session -s $SESSION_NAME -d "$COMMAND"; then
     tmux capture-pane -p -t $SESSION_NAME
     echo "To re-attach:"
     echo "    tmux attach -t $SESSION_NAME"
+    echo "To dump latest output/logs:"
+    echo "    tmux capture-pane -p -t $SESSION_NAME"
 else
     echo "Failed to launch tmux"
 fi
