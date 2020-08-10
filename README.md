@@ -1,3 +1,5 @@
+**Update**: `here-jupyter` has been generalized to `here-this`: https://github.com/soxofaan/here-this
+
 
 # Here Jupyter
 
